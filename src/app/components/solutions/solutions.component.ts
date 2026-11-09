@@ -70,6 +70,48 @@ export class SolutionsComponent {
       codeUrl: 'https://github.com/AntonioRM1022/Channel_Bot_Price'
     },
     {
+      id: 'codele-app-android',
+      featured: false,
+      category: 'Desarrollo Móvil Nativo & Gamificación',
+      title: 'Codele App - Reto Diario de Programación en Android Nativo',
+      businessProblem:
+        'Aplicación nativa de alto rendimiento con foco en retención de usuarios y gamificación técnica. Desarrollada con Kotlin 2.0+ y Jetpack Compose (Material Design 3), animaciones 3D por hardware (graphicsLayer), persistencia de estados de partida y temporizador reactivo diario a las 6:00 a.m.',
+      videoUrl: 'assets/demos/codele-demo.mp4',
+      posterLabel: 'Jetpack Compose Nativo + Animaciones 3D y Persistencia',
+      kpiHighlight: '100% Android Nativo con Kotlin 2.0 & Jetpack Compose',
+      technologies: ['Kotlin 2.0+', 'Jetpack Compose', 'Material Design 3', 'Android 15 (API 35)', 'SharedPreferences', 'Canvas 3D'],
+      demoUrl: '#contacto',
+      codeUrl: 'https://github.com/AntonioRM1022/Codele_App'
+    },
+    {
+      id: 'devhack-platform',
+      featured: false,
+      category: 'Plataformas Web & Arquitectura Cloud',
+      title: 'DevHack 2026 - Plataforma Full-Stack para Eventos Tecnológicos',
+      businessProblem:
+        'Arquitectura cloud desacoplada para gestión y registro de eventos masivos. Diseñada con Angular 17+ Standalone y API en FastAPI, base de datos MySQL distribuida en la nube con Aiven, control de sesiones anti-saturación de 60 segundos, validación reCAPTCHA y notificaciones transaccionales automatizadas vía EmailJS.',
+      videoUrl: 'assets/demos/devhack-demo.mp4',
+      posterLabel: 'Frontend Netlify + FastAPI en Render + MySQL Aiven Cloud',
+      kpiHighlight: 'Arquitectura distribuida en producción (Netlify + Render + Aiven)',
+      technologies: ['Angular 17+', 'FastAPI (Python)', 'MySQL Cloud (Aiven)', 'Render', 'Netlify', 'EmailJS', 'Figma'],
+      demoUrl: '#contacto',
+      codeUrl: 'https://github.com/AntonioRM1022'
+    },
+    {
+      id: 'colorimetria-ai-vision',
+      featured: false,
+      category: 'Inteligencia Artificial & Visión por Computadora',
+      title: 'App Móvil de Diagnóstico Facial & Colorimetría con GPT-4o Visión',
+      businessProblem:
+        'Solución de IA multimodal orientada a retail y estética digital. Analiza rasgos faciales e iluminación mediante GPT-4o Visión, clasifica paletas de colorimetría estacional, genera reportes visuales en formato infografía de alta resolución (.png) y los almacena en base de datos local SQLite.',
+      videoUrl: 'assets/demos/colorimetria-ai-demo.mp4',
+      posterLabel: 'Análisis Facial con GPT-4o Vision + Generación de Infografías PNG',
+      kpiHighlight: 'Diagnóstico biométrico y de imagen asistido por IA',
+      technologies: ['Flutter (Dart)', 'OpenAI GPT-4o Vision', 'SQLite (sqflite)', 'flutter_animate', 'gal / screenshot', 'Android / iOS'],
+      demoUrl: '#contacto',
+      codeUrl: 'https://github.com/AntonioRM1022'
+    },
+    {
       id: 'spotify-sync-engine',
       featured: false,
       category: 'Integración de APIs & Backend ETL',
@@ -94,62 +136,6 @@ export class SolutionsComponent {
       posterLabel: 'Capas Geoespaciales y Analítica Operativa en Tiempo Real',
       kpiHighlight: 'Visibilidad 360° de activos en campo',
       technologies: ['Angular', 'TypeScript', 'Node.js', 'PostGIS', 'Docker'],
-      demoUrl: '#contacto',
-      codeUrl: 'https://github.com/AntonioRM1022'
-    },
-    {
-      id: 'devhack-platform',
-      featured: false,
-      category: 'Plataformas Web & Arquitectura Cloud',
-      title: 'DevHack 2026 - Plataforma Full-Stack para Eventos Tecnológicos',
-      businessProblem:
-        'Arquitectura cloud desacoplada para gestión y registro de eventos masivos. Diseñada con Angular 17+ Standalone y API en FastAPI, base de datos MySQL distribuida en la nube con Aiven, control de sesiones anti-saturación de 60 segundos, validación reCAPTCHA y notificaciones transaccionales automatizadas vía EmailJS.',
-      videoUrl: 'assets/demos/devhack-demo.mp4',
-      posterLabel: 'Frontend Netlify + FastAPI en Render + MySQL Aiven Cloud',
-      kpiHighlight: 'Arquitectura distribuida en producción (Netlify + Render + Aiven)',
-      technologies: ['Angular 17+', 'FastAPI (Python)', 'MySQL Cloud (Aiven)', 'Render', 'Netlify', 'EmailJS', 'Figma'],
-      demoUrl: '#contacto',
-      codeUrl: 'https://github.com/AntonioRM1022'
-    },
-    {
-      id: 'colorimetria-ai-vision',
-      featured: false,
-      category: 'Inteligencia Artificial & Visión por Computadora',
-      title: 'App Móvil de Diagnóstico Facial & Colorimetría con GPT-4o Visión',
-      businessProblem:
-        'Solución de IA multimodal orientada a retail y estética digital. Analiza rasgos faciales e iluminación mediante GPT-4o Visión, clasifica paletas de colorimetría estacional, genera reportes visuales en formato infografía de alta resolución (.png) y los almacena en base de datos local SQLite.',
-      videoUrl: 'assets/demos/colorimetria-ai-demo.mp4',
-      posterLabel: 'Análisis Facial con GPT-4o Vision + Generación de Infografías PNG',
-      kpiHighlight: 'Diagnóstico biométrico y de imagen asistido por IA',
-      technologies: ['Flutter (Dart)', 'OpenAI GPT-4o Vision', 'SQLite (sqflite)', 'flutter_animate', 'gal / screenshot', 'Android / iOS'],
-      demoUrl: '#contacto',
-      codeUrl: 'https://github.com/AntonioRM1022'
-    },
-    {
-      id: 'devhack-platform',
-      featured: false,
-      category: 'Plataformas Web & Arquitectura Cloud',
-      title: 'DevHack 2026 - Plataforma Full-Stack para Eventos Tecnológicos',
-      businessProblem:
-        'Arquitectura cloud desacoplada para gestión y registro de eventos masivos. Diseñada con Angular 17+ Standalone y API en FastAPI, base de datos MySQL distribuida en la nube con Aiven, control de sesiones anti-saturación de 60 segundos, validación reCAPTCHA y notificaciones transaccionales automatizadas vía EmailJS.',
-      videoUrl: 'assets/demos/devhack-demo.mp4',
-      posterLabel: 'Frontend Netlify + FastAPI en Render + MySQL Aiven Cloud',
-      kpiHighlight: 'Arquitectura distribuida en producción (Netlify + Render + Aiven)',
-      technologies: ['Angular 17+', 'FastAPI (Python)', 'MySQL Cloud (Aiven)', 'Render', 'Netlify', 'EmailJS', 'Figma'],
-      demoUrl: '#contacto',
-      codeUrl: 'https://github.com/AntonioRM1022'
-    },
-    {
-      id: 'colorimetria-ai-vision',
-      featured: false,
-      category: 'Inteligencia Artificial & Visión por Computadora',
-      title: 'App Móvil de Diagnóstico Facial & Colorimetría con GPT-4o Visión',
-      businessProblem:
-        'Solución de IA multimodal orientada a retail y estética digital. Analiza rasgos faciales e iluminación mediante GPT-4o Visión, clasifica paletas de colorimetría estacional, genera reportes visuales en formato infografía de alta resolución (.png) y los almacena en base de datos local SQLite.',
-      videoUrl: 'assets/demos/colorimetria-ai-demo.mp4',
-      posterLabel: 'Análisis Facial con GPT-4o Vision + Generación de Infografías PNG',
-      kpiHighlight: 'Diagnóstico biométrico y de imagen asistido por IA',
-      technologies: ['Flutter (Dart)', 'OpenAI GPT-4o Vision', 'SQLite (sqflite)', 'flutter_animate', 'gal / screenshot', 'Android / iOS'],
       demoUrl: '#contacto',
       codeUrl: 'https://github.com/AntonioRM1022'
     },
