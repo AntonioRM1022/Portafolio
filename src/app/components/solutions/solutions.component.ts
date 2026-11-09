@@ -70,6 +70,20 @@ export class SolutionsComponent {
       codeUrl: 'https://github.com/AntonioRM1022/Channel_Bot_Price'
     },
     {
+      id: 'ots-ingenieria-corp',
+      featured: false,
+      category: 'Portales Corporativos & Captación B2B',
+      title: 'OTS Ingeniería - Plataforma Web Corporativa & Captación B2B',
+      businessProblem:
+        'Sitio web institucional y catálogo digital de servicios de ingeniería contra incendios (NFPA) y protección civil. Optimizado para conversión B2B con formularios dinámicos precargados por servicio, blindaje anti-spam con Google reCAPTCHA y despacho automatizado de cotizaciones a ventas vía EmailJS.',
+      videoUrl: 'assets/demos/ots-ingenieria-demo.mp4',
+      posterLabel: 'Portal B2B en Angular + Validación reCAPTCHA y Despacho EmailJS',
+      kpiHighlight: 'Conversión directa y captación de cotizaciones B2B',
+      technologies: ['Angular (Standalone)', 'Tailwind CSS', 'EmailJS', 'Google reCAPTCHA', 'Vitest', 'Netlify'],
+      demoUrl: '#contacto',
+      codeUrl: 'https://github.com/AntonioRM1022'
+    },
+    {
       id: 'codele-app-android',
       featured: false,
       category: 'Desarrollo Móvil Nativo & Gamificación',
