@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 export interface SolutionProject {
@@ -12,6 +12,7 @@ export interface SolutionProject {
   technologies: string[];
   demoUrl: string;
   codeUrl: string;
+  featured?: boolean;
 }
 
 @Component({
@@ -22,9 +23,13 @@ export interface SolutionProject {
   styleUrl: './solutions.component.scss'
 })
 export class SolutionsComponent {
-  readonly projects: SolutionProject[] = [
+  isModalOpen = false;
+  selectedCategory = 'Todos';
+
+  readonly allProjects: SolutionProject[] = [
     {
       id: 'sofia-price-enterprise',
+      featured: true,
       category: 'Fintech & Automatización de Cartera',
       title: 'Sofia Price v2 - Sistema Enterprise de Cobranza & Préstamos',
       businessProblem:
@@ -38,6 +43,7 @@ export class SolutionsComponent {
     },
     {
       id: 'calculadora-whatsapp-status',
+      featured: true,
       category: 'Comercio Móvil & Automatización de Ventas',
       title: 'App Móvil de Fijación de Precios & Publicación WhatsApp con IA',
       businessProblem:
@@ -51,6 +57,7 @@ export class SolutionsComponent {
     },
     {
       id: 'channel-bot-price',
+      featured: true,
       category: 'Web Scraping & Automatización de Canales',
       title: 'Bot de Monitoreo de Liquidaciones & Difusión en WhatsApp',
       businessProblem:
@@ -61,7 +68,85 @@ export class SolutionsComponent {
       technologies: ['Python 3.11', 'Playwright Stealth', 'Docker Compose', 'WAHA API', 'SQLAlchemy / SQLite', 'APScheduler'],
       demoUrl: '#contacto',
       codeUrl: 'https://github.com/AntonioRM1022/Channel_Bot_Price'
+    },
+    {
+      id: 'spotify-sync-engine',
+      featured: false,
+      category: 'Integración de APIs & Backend ETL',
+      title: 'Motor de Sincronización Automática de Datos & Gestión de Cuotas API',
+      businessProblem:
+        'Pipeline de datos backend para sincronización masiva entre plataformas. Integra autenticación OAuth 2.0 segura con rotación de tokens, paginación completa, inserción por lotes (batching) y algoritmos de deduplicación para operar fluidamente bajo límites de tasa (Rate Limiting).',
+      videoUrl: 'assets/demos/spotify-sync-demo.mp4',
+      posterLabel: 'Pipeline de Datos, OAuth 2.0 y Batch Processing',
+      kpiHighlight: '100% deduplicación y cero desbordamiento de API',
+      technologies: ['Python 3.10+', 'OAuth 2.0', 'REST APIs', 'Spotipy', 'Batch Processing', 'ETL Pipelines'],
+      demoUrl: '#contacto',
+      codeUrl: 'https://github.com/AntonioRM1022/Save_Liked_Song_a-Playlist'
+    },
+    {
+      id: 'gis-executive-dashboard',
+      featured: false,
+      category: 'Inteligencia Territorial & Logística',
+      title: 'Dashboard GIS para Monitoreo y Toma de Decisiones',
+      businessProblem:
+        'Centraliza datos geográficos y telemetría de activos en campo en un mapa interactivo de alto rendimiento. Diseñado para directores de operaciones que requieren visibilidad en tiempo real de cuadrillas, rutas críticas e indicadores territoriales.',
+      videoUrl: 'assets/demos/gis-dashboard-demo.mp4',
+      posterLabel: 'Capas Geoespaciales y Analítica Operativa en Tiempo Real',
+      kpiHighlight: 'Visibilidad 360° de activos en campo',
+      technologies: ['Angular', 'TypeScript', 'Node.js', 'PostGIS', 'Docker'],
+      demoUrl: '#contacto',
+      codeUrl: 'https://github.com/AntonioRM1022'
+    },
+    {
+      id: 'drone-vision-system',
+      featured: false,
+      category: 'Industria 4.0 & Visión Artificial',
+      title: 'Sistema de Supervisión Automatizada con Visión por Computadora',
+      businessProblem:
+        'Sustituye revisiones visuales manuales en campo mediante modelos de detección de objetos con OpenCV y FastAPI. Procesa flujos de video para control de calidad, conteo de piezas o inspección de infraestructura crítica con reportes inmediatos.',
+      videoUrl: 'assets/demos/drone-vision-demo.mp4',
+      posterLabel: 'Detección de Objetos en Vivo con OpenCV & FastAPI',
+      kpiHighlight: 'Detección en tiempo real con 98% de precisión',
+      technologies: ['Python', 'OpenCV', 'FastAPI', 'Flutter', 'Docker'],
+      demoUrl: '#contacto',
+      codeUrl: 'https://github.com/AntonioRM1022'
     }
   ];
-}
 
+  get featuredProjects(): SolutionProject[] {
+    return this.allProjects.filter(p => p.featured);
+  }
+
+  get filteredProjects(): SolutionProject[] {
+    if (this.selectedCategory === 'Todos') {
+      return this.allProjects;
+    }
+    return this.allProjects.filter(p => p.category === this.selectedCategory);
+  }
+
+  get categories(): string[] {
+    const cats = new Set(this.allProjects.map(p => p.category));
+    return ['Todos', ...Array.from(cats)];
+  }
+
+  openModal(): void {
+    this.isModalOpen = true;
+    document.body.style.overflow = 'hidden';
+  }
+
+  closeModal(): void {
+    this.isModalOpen = false;
+    document.body.style.overflow = '';
+  }
+
+  filterCategory(cat: string): void {
+    this.selectedCategory = cat;
+  }
+
+  @HostListener('document:keydown.escape')
+  onEscape(): void {
+    if (this.isModalOpen) {
+      this.closeModal();
+    }
+  }
+}

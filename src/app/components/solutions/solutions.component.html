@@ -1,15 +1,30 @@
 <section id="soluciones" class="solutions">
   <div class="container">
-    <div class="solutions__header">
-      <span class="section-tag">Soluciones en Producción</span>
-      <h2 class="solutions__title">Sistemas Diseñados para Resolver Retos de Negocio</h2>
-      <p class="solutions__lead">
-        Casos reales donde combinamos ingeniería de software, inteligencia artificial e interfaces ejecutivas para transformar operaciones complejas en ventajas competitivas.
-      </p>
+    <div class="solutions__top-bar">
+      <div class="solutions__header">
+        <span class="section-tag">Soluciones en Producción</span>
+        <h2 class="solutions__title">Sistemas Diseñados para Resolver Retos de Negocio</h2>
+        <p class="solutions__lead">
+          Casos reales donde combinamos ingeniería de software, inteligencia artificial y automatización para transformar operaciones empresariales.
+        </p>
+      </div>
+
+      <div class="solutions__view-all-cta">
+        <button type="button" class="btn btn--outline solutions__open-modal-btn" (click)="openModal()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+          <span>Ver catálogo completo ({{ allProjects.length }} proyectos)</span>
+        </button>
+      </div>
     </div>
 
+    <!-- Grid de Proyectos Destacados (Frente) -->
     <div class="solutions__grid">
-      @for (project of projects; track project.id) {
+      @for (project of featuredProjects; track project.id) {
         <article class="project-card">
           <!-- Contenedor superior para Video / GIF con Autoplay -->
           <div class="project-card__media">
@@ -23,18 +38,14 @@
               preload="metadata">
             </video>
 
-            <!-- Vista previa corporativa (visible mientras se carga o si aún no se sube el MP4/GIF) -->
+            <!-- Vista previa corporativa de respaldo -->
             <div class="project-card__media-placeholder">
               <div class="media-window-bar">
                 <span></span><span></span><span></span>
                 <small>{{ project.category }}</small>
               </div>
               <div class="media-preview-body">
-                <div class="play-indicator">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                  </svg>
-                </div>
+                <div class="play-indicator">▶</div>
                 <span class="media-preview-label">{{ project.posterLabel }}</span>
               </div>
             </div>
@@ -55,15 +66,10 @@
               }
             </div>
 
-            <!-- Acciones: Ver Demo (Primario) y Ver Código (Secundario Outline) -->
+            <!-- Acciones: Ver Demo y Ver Código -->
             <div class="project-card__actions">
               <a [href]="project.demoUrl" class="btn btn--primary project-card__btn">
                 <span>Ver Demo</span>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
               </a>
 
               <a [href]="project.codeUrl" target="_blank" rel="noopener noreferrer" class="btn btn--outline project-card__btn">
@@ -74,6 +80,96 @@
         </article>
       }
     </div>
+
+    <!-- Banner inferior para invitar a ver más -->
+    <div class="solutions__more-banner">
+      <div class="more-banner-content">
+        <div class="more-banner-text">
+          <h4>¿Buscas un caso de uso específico o una arquitectura particular?</h4>
+          <p>Explora todos los sistemas que he desarrollado: automatizaciones con WhatsApp, visión artificial, scripts de ETL y dashboards empresariales.</p>
+        </div>
+        <button type="button" class="btn btn--primary" (click)="openModal()">
+          <span>Abrir catálogo completo</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
   </div>
 </section>
 
+<!-- MODAL CORPORATIVO FULLSCREEN / DIALOG B2B -->
+@if (isModalOpen) {
+  <div class="modal-backdrop" (click)="closeModal()" aria-hidden="true"></div>
+
+  <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-header">
+      <div class="modal-header__info">
+        <span class="section-tag">Repositorio de Soluciones</span>
+        <h3 id="modal-title" class="modal-header__title">Catálogo Completo de Proyectos &amp; Sistemas</h3>
+        <p class="modal-header__desc">
+          Explora todas las aplicaciones, APIs, microservicios y automatizaciones construidas para resolver retos técnicos y de negocio.
+        </p>
+      </div>
+
+      <button type="button" class="modal-close-btn" (click)="closeModal()" aria-label="Cerrar ventana">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Filtros por Categoría -->
+    <div class="modal-filters">
+      @for (cat of categories; track cat) {
+        <button
+          type="button"
+          class="filter-chip"
+          [class.filter-chip--active]="selectedCategory === cat"
+          (click)="filterCategory(cat)">
+          {{ cat }}
+        </button>
+      }
+    </div>
+
+    <!-- Listado en Grid de Todos los Proyectos dentro del Modal -->
+    <div class="modal-body">
+      <div class="modal-grid">
+        @for (item of filteredProjects; track item.id) {
+          <article class="modal-card">
+            <div class="modal-card__header">
+              <span class="modal-card__category">{{ item.category }}</span>
+              <span class="modal-card__kpi">{{ item.kpiHighlight }}</span>
+            </div>
+
+            <h4 class="modal-card__title">{{ item.title }}</h4>
+            <p class="modal-card__problem">{{ item.businessProblem }}</p>
+
+            <div class="modal-card__badges">
+              @for (tech of item.technologies; track tech) {
+                <span class="tech-badge">{{ tech }}</span>
+              }
+            </div>
+
+            <div class="modal-card__actions">
+              <a [href]="item.codeUrl" target="_blank" rel="noopener noreferrer" class="btn btn--outline modal-card__btn">
+                <span>Ver Código en GitHub</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+
+              <a href="#contacto" (click)="closeModal()" class="btn btn--primary modal-card__btn">
+                <span>Cotizar similar</span>
+              </a>
+            </div>
+          </article>
+        }
+      </div>
+    </div>
+  </div>
+}
