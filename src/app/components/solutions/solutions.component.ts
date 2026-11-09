@@ -70,6 +70,20 @@ export class SolutionsComponent {
       codeUrl: 'https://github.com/AntonioRM1022/Channel_Bot_Price'
     },
     {
+      id: 'ruteia-swarm-routing',
+      featured: false,
+      category: 'Logística Inteligente & Algoritmos de Optimización',
+      title: 'RuteIA - Plataforma de Ruteo Masivo con Inteligencia Espacial de Enjambre (Swarm Routing)',
+      businessProblem:
+        'Resuelve la complejidad logística y sobrecostos en cuadrillas de campo sobre padrones de más de 80,000 puntos. Implementa un motor matemático híbrido (K-Means + TSP + Nearest Neighbor) denominado Modo Enjambre para barrido denso diario, copilot con OpenAI para extracción de restricciones en lenguaje natural y visualización geoespacial de alto rendimiento con React Leaflet y OSRM.',
+      videoUrl: 'assets/demos/ruteia-demo.mp4',
+      posterLabel: 'Motor de Optimización Swarm Routing + Copiloto OpenAI & React Leaflet',
+      kpiHighlight: 'Optimización de rutas para padrones de +80,000 cuentas',
+      technologies: ['FastAPI (Python)', 'React (Vite)', 'OpenAI API', 'Algoritmos TSP & K-Means', 'React Leaflet', 'OSRM Routing API'],
+      demoUrl: '#contacto',
+      codeUrl: 'https://github.com/AntonioRM1022'
+    },
+    {
       id: 'storage-service-api-s3',
       featured: false,
       category: 'Cloud Storage & Arquitectura de Microservicios',
