@@ -57,12 +57,13 @@
 }
 
 /* =========================================
-   TARJETAS PRINCIPALES DEL GRID (CUADRADAS Y SIMÉTRICAS)
+   TARJETAS PRINCIPALES DE SOLUCIONES (PROPORCIONALES A METODOLOGÍA)
    ========================================= */
 .project-card {
   background-color: var(--bg-pure);
   border: 1px solid var(--border-card);
   border-radius: var(--radius-lg);
+  padding: 2.25rem 2rem;
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
@@ -80,15 +81,13 @@
     justify-content: space-between;
     align-items: center;
     gap: 0.75rem;
-    min-height: 64px;
-    padding: 1.25rem 1.75rem;
+    padding-bottom: 1.15rem;
+    margin-bottom: 1.25rem;
     border-bottom: 1px solid var(--border-subtle);
-    background-color: var(--bg-pearl);
-    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
   }
 
   &__category {
-    font-size: 0.75rem;
+    font-size: 0.74rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -100,17 +99,15 @@
     font-size: 0.72rem;
     font-weight: 600;
     color: var(--accent-slate);
-    background-color: #FFFFFF;
-    border: 1px solid var(--border-subtle);
+    background-color: var(--accent-sand-light);
+    border: 1px solid var(--accent-sand);
     padding: 0.25rem 0.65rem;
     border-radius: 999px;
-    box-shadow: var(--shadow-sm);
     white-space: nowrap;
     flex-shrink: 0;
   }
 
   &__body {
-    padding: 1.75rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -124,7 +121,7 @@
   }
 
   &__title {
-    font-size: 1.22rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: var(--text-heading);
     margin-bottom: 0.85rem;
@@ -133,7 +130,7 @@
   }
 
   &__problem {
-    font-size: 0.92rem;
+    font-size: 0.95rem;
     color: var(--text-secondary);
     line-height: 1.6;
   }
@@ -149,9 +146,9 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.45rem;
-    padding-top: 1.15rem;
+    padding-top: 1.25rem;
     border-top: 1px solid var(--border-subtle);
-    min-height: 72px;
+    min-height: 70px;
     align-content: flex-start;
   }
 
@@ -161,7 +158,7 @@
   }
 
   &__btn {
-    padding: 0.8rem 1.25rem;
+    padding: 0.75rem 1.25rem;
     font-size: 0.92rem;
     font-weight: 600;
     width: 100%;
