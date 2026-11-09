@@ -1,0 +1,216 @@
+.solutions {
+  background-color: var(--bg-pure);
+  padding: 6rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+
+  @media (max-width: 768px) {
+    padding: 4rem 0;
+  }
+
+  &__header {
+    max-width: 700px;
+    margin-bottom: 3.5rem;
+  }
+
+  &__title {
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    margin-bottom: 1rem;
+  }
+
+  &__lead {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 720px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.project-card {
+  background-color: var(--bg-pure);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent-sand);
+  }
+
+  &__media {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    background-color: var(--bg-pearl);
+    border-bottom: 1px solid var(--border-subtle);
+    overflow: hidden;
+  }
+
+  &__video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+  }
+
+  &__media-placeholder {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, #F8FAFC 0%, #EFF3F8 100%);
+  }
+
+  &__kpi {
+    position: absolute;
+    bottom: 0.75rem;
+    right: 0.75rem;
+    z-index: 3;
+    background-color: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(4px);
+    color: var(--accent-steel);
+    border: 1px solid var(--border-subtle);
+    font-size: 0.73rem;
+    font-weight: 600;
+    padding: 0.25rem 0.65rem;
+    border-radius: 999px;
+    box-shadow: var(--shadow-sm);
+  }
+
+  &__body {
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  &__category {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent-steel);
+    margin-bottom: 0.45rem;
+  }
+
+  &__title {
+    font-size: 1.22rem;
+    font-weight: 700;
+    color: var(--text-heading);
+    margin-bottom: 0.8rem;
+  }
+
+  &__problem {
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+  }
+
+  &__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  &__actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  &__btn {
+    padding: 0.7rem 1rem;
+    font-size: 0.88rem;
+    width: 100%;
+  }
+}
+
+.media-window-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.55rem 0.85rem;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid var(--border-subtle);
+
+  span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #CBD5E1;
+  }
+
+  small {
+    margin-left: 0.4rem;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+}
+
+.media-preview-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  text-align: center;
+  gap: 0.65rem;
+}
+
+.play-indicator {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  color: var(--accent-steel);
+  border: 1px solid var(--accent-sand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.media-preview-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--accent-slate);
+  max-width: 240px;
+}
+
+.tech-badge {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--accent-slate);
+  background-color: var(--bg-pearl);
+  border: 1px solid var(--border-subtle);
+  padding: 0.22rem 0.65rem;
+  border-radius: 4px;
+}
+

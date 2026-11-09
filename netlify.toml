@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  publish = "dist/antonio-rayas-b2b-portfolio/browser"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+

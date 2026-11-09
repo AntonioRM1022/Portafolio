@@ -1,0 +1,79 @@
+<section id="soluciones" class="solutions">
+  <div class="container">
+    <div class="solutions__header">
+      <span class="section-tag">Soluciones en Producción</span>
+      <h2 class="solutions__title">Sistemas Diseñados para Resolver Retos de Negocio</h2>
+      <p class="solutions__lead">
+        Casos reales donde combinamos ingeniería de software, inteligencia artificial e interfaces ejecutivas para transformar operaciones complejas en ventajas competitivas.
+      </p>
+    </div>
+
+    <div class="solutions__grid">
+      @for (project of projects; track project.id) {
+        <article class="project-card">
+          <!-- Contenedor superior para Video / GIF con Autoplay -->
+          <div class="project-card__media">
+            <video
+              class="project-card__video"
+              [src]="project.videoUrl"
+              autoplay
+              loop
+              muted
+              playsinline
+              preload="metadata">
+            </video>
+
+            <!-- Vista previa corporativa (visible mientras se carga o si aún no se sube el MP4/GIF) -->
+            <div class="project-card__media-placeholder">
+              <div class="media-window-bar">
+                <span></span><span></span><span></span>
+                <small>{{ project.category }}</small>
+              </div>
+              <div class="media-preview-body">
+                <div class="play-indicator">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                </div>
+                <span class="media-preview-label">{{ project.posterLabel }}</span>
+              </div>
+            </div>
+
+            <span class="project-card__kpi">{{ project.kpiHighlight }}</span>
+          </div>
+
+          <!-- Cuerpo de la Tarjeta -->
+          <div class="project-card__body">
+            <span class="project-card__category">{{ project.category }}</span>
+            <h3 class="project-card__title">{{ project.title }}</h3>
+            <p class="project-card__problem">{{ project.businessProblem }}</p>
+
+            <!-- Badges minimalistas de tecnologías -->
+            <div class="project-card__badges" aria-label="Tecnologías utilizadas">
+              @for (tech of project.technologies; track tech) {
+                <span class="tech-badge">{{ tech }}</span>
+              }
+            </div>
+
+            <!-- Acciones: Ver Demo (Primario) y Ver Código (Secundario Outline) -->
+            <div class="project-card__actions">
+              <a [href]="project.demoUrl" class="btn btn--primary project-card__btn">
+                <span>Ver Demo</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+
+              <a [href]="project.codeUrl" target="_blank" rel="noopener noreferrer" class="btn btn--outline project-card__btn">
+                <span>Ver Código</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+

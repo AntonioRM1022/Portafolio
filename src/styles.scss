@@ -1,0 +1,128 @@
+:root {
+  /* Fondos Light Mode (Blanco puro y Gris Perla / Humo) */
+  --bg-pure: #FFFFFF;
+  --bg-pearl: #F6F8FA;
+  --bg-sand-tint: #F7F5F0;
+
+  /* Texto Principal y Secundario (Azul Marino Muy Oscuro y Carbón) */
+  --text-primary: #111827;     /* Gris carbón / marino profundo */
+  --text-heading: #0F172A;     /* Azul marino corporativo oscuro */
+  --text-secondary: #475569;   /* Pizarra medio para lectura fluida */
+  --text-muted: #64748B;       /* Pizarra suave para etiquetas */
+
+  /* Acentos Corporativos (Azul Acero, Pizarra y Arena) */
+  --accent-steel: #234E70;     /* Azul acero principal */
+  --accent-steel-hover: #1A3B56;
+  --accent-slate: #334155;     /* Pizarra corporativo */
+  --accent-sand: #D4C5B1;      /* Tono arena cálido para detalles y bordes sutiles */
+  --accent-sand-light: #F3EFEA;
+
+  /* Bordes y Sombras Sutiles */
+  --border-subtle: #E2E8F0;
+  --border-card: #EAECEF;
+  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 12px 32px -4px rgba(15, 23, 42, 0.06), 0 4px 12px -2px rgba(15, 23, 42, 0.03);
+  --shadow-lg: 0 20px 40px -8px rgba(15, 23, 42, 0.08);
+
+  /* radios y transiciones */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --transition-base: 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text-primary);
+  background-color: var(--bg-pure);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  line-height: 1.6;
+  background-color: var(--bg-pure);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--text-heading);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Botones Globales B2B */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  border: 1px solid transparent;
+  white-space: nowrap;
+
+  &--primary {
+    background-color: var(--accent-steel);
+    color: #FFFFFF;
+    box-shadow: 0 2px 6px rgba(35, 78, 112, 0.18);
+
+    &:hover {
+      background-color: var(--accent-steel-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(35, 78, 112, 0.24);
+    }
+  }
+
+  &--outline {
+    background-color: transparent;
+    color: var(--accent-slate);
+    border-color: var(--border-subtle);
+
+    &:hover {
+      border-color: var(--accent-steel);
+      color: var(--accent-steel);
+      background-color: rgba(35, 78, 112, 0.03);
+    }
+  }
+}
+
+.section-tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-steel);
+  background-color: var(--accent-sand-light);
+  border: 1px solid var(--accent-sand);
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+

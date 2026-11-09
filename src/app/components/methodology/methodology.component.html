@@ -1,0 +1,37 @@
+<section id="metodologia" class="methodology">
+  <div class="container">
+    <div class="methodology__header">
+      <span class="section-tag">Cómo Trabajamos</span>
+      <h2 class="methodology__title">Metodología de Consultoría y Ejecución</h2>
+      <p class="methodology__lead">
+        Un proceso estructurado y transparente diseñado para directores de operaciones, fundadores y líderes de área que buscan certidumbre técnica y resultados de negocio.
+      </p>
+    </div>
+
+    <div class="methodology__grid">
+      @for (step of steps; track step.stepNumber) {
+        <article class="method-card">
+          <div class="method-card__top">
+            <span class="method-card__number">{{ step.stepNumber }}</span>
+            <span class="method-card__subtitle">{{ step.subtitle }}</span>
+          </div>
+
+          <h3 class="method-card__title">{{ step.title }}</h3>
+          <p class="method-card__description">{{ step.description }}</p>
+
+          <ul class="method-card__list">
+            @for (item of step.deliverables; track item) {
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>{{ item }}</span>
+              </li>
+            }
+          </ul>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
