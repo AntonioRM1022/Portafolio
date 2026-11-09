@@ -7,7 +7,7 @@ import { Component, HostListener } from '@angular/core';
   styleUrl: './hero.component.scss'
 })
 export class HeroComponent {
-  profileImage = 'assets/images/profile-placeholder.svg';
+  profileImage = 'assets/perfil.jpg';
   partnerImage = 'assets/images/4nucleos-placeholder.svg';
 
   isPartnerModalOpen = false;
