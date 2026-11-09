@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 })
 export class WhatsappFabComponent {
   readonly whatsappUrl =
-    'https://wa.me/5215500000000?text=Hola%20Antonio,%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20platicar%20de%20un%20proyecto.';
+    'https://wa.me/525561380652?text=Hola%20Antonio,%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20platicar%20sobre%20un%20proyecto.';
 }
 
