@@ -5,7 +5,7 @@
   background-color: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-subtle);
-  height: 72px;
+  height: 68px;
   display: flex;
   align-items: center;
 
@@ -17,29 +17,15 @@
 
   &__brand {
     display: flex;
-    flex-direction: column;
-    gap: 0.1rem;
-    transition: opacity var(--transition-base);
-
-    &:hover {
-      opacity: 0.85;
-    }
-  }
-
-  &__name {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 700;
-    font-size: 1.15rem;
-    letter-spacing: -0.02em;
-    color: var(--text-heading);
-    line-height: 1.15;
+    align-items: center;
   }
 
   &__role {
-    font-size: 0.76rem;
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    color: var(--text-muted);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--text-heading);
   }
 
   &__nav {
@@ -81,7 +67,7 @@
   }
 
   &__cta {
-    padding: 0.65rem 1.3rem;
+    padding: 0.6rem 1.25rem;
     font-size: 0.88rem;
   }
 }
