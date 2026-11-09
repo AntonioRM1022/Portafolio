@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss'
 })
-export class HeroComponent {}
+export class HeroComponent {
+  // Cuando tengas tu foto, guárdala en 'public/assets/images/profile.jpg' y cambia esta ruta
+  profileImage = 'assets/images/profile-placeholder.svg';
 
+  onImageError(event: Event): void {
+    const target = event.target as HTMLImageElement;
+    target.src = 'assets/images/profile-placeholder.svg';
+  }
+}

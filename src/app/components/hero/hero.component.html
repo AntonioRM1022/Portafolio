@@ -1,90 +1,92 @@
 <section class="hero">
   <div class="container hero__grid">
+    <!-- Columna Izquierda: Mensaje y Propuesta de Valor -->
     <div class="hero__content">
-      <span class="section-tag">Ingeniería de Software &amp; Automatización B2B</span>
+      <div class="hero__badge">
+        <span class="status-indicator"></span>
+        <span>Disponible para nuevos proyectos &amp; consultoría</span>
+      </div>
 
       <h1 class="hero__title">
-        Antonio Rayas - Consultor &amp; Desarrollador Full-Stack
+        Antonio Rayas
+        <span class="hero__title-sub">Consultor de Software &amp; Desarrollador Full-Stack</span>
       </h1>
 
-      <p class="hero__subtitle">
-        Hagamos equipo. Traduzco tus retos de negocio en software, automatizaciones y sistemas que escalan tu operación.
+      <p class="hero__lead">
+        Hagamos equipo. Traduzco tus retos de negocio en <strong>software a la medida</strong>, <strong>automatizaciones</strong> y <strong>sistemas de misión crítica</strong> que escalan la operación de tu empresa.
       </p>
 
       <div class="hero__actions">
         <a href="#contacto" class="btn btn--primary hero__btn-main">
           <span>Platiquemos de tu proyecto</span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
             <line x1="5" y1="12" x2="19" y2="12"></line>
             <polyline points="12 5 19 12 12 19"></polyline>
           </svg>
         </a>
+
         <a href="#soluciones" class="btn btn--outline">
-          Explorar soluciones reales
+          <span>Ver casos de éxito</span>
         </a>
       </div>
 
-      <div class="hero__trust">
-        <div class="hero__trust-item">
-          <span class="hero__trust-label">Enfoque</span>
-          <span class="hero__trust-value">ROI Operativo &amp; Escalabilidad</span>
+      <!-- Métricas / Fichas de Confianza Clave -->
+      <div class="hero__metrics">
+        <div class="metric-card">
+          <span class="metric-card__value">Full-Stack &amp; IA</span>
+          <span class="metric-card__label">Angular, Flutter, Python FastAPI y LLMs</span>
         </div>
-        <div class="hero__trust-divider"></div>
-        <div class="hero__trust-item">
-          <span class="hero__trust-label">Especialidad</span>
-          <span class="hero__trust-value">Sistemas Full-Stack, IA &amp; Visión Artificial</span>
+        <div class="metric-card">
+          <span class="metric-card__value">ROI Operativo</span>
+          <span class="metric-card__label">Reducción de horas manuales y automatización</span>
         </div>
-        <div class="hero__trust-divider"></div>
-        <div class="hero__trust-item">
-          <span class="hero__trust-label">Modalidad</span>
-          <span class="hero__trust-value">Consultoría Directa Llave en Mano</span>
+        <div class="metric-card">
+          <span class="metric-card__value">Llave en Mano</span>
+          <span class="metric-card__label">Desde arquitectura UI/UX hasta despliegue cloud</span>
         </div>
       </div>
     </div>
 
-    <!-- Panel Arquitectónico Ejecutivo (Light Mode) -->
-    <div class="hero__visual" aria-hidden="true">
-      <div class="executive-card">
-        <div class="executive-card__header">
-          <span class="executive-card__badge">Arquitectura Orientada a Negocio</span>
-          <span class="executive-card__status">
-            <span class="status-dot"></span> Disponible para nuevos proyectos
-          </span>
-        </div>
+    <!-- Columna Derecha: Tarjeta Fotográfica Ejecutiva con Indicadores Reales -->
+    <div class="hero__showcase">
+      <div class="profile-card">
+        <!-- Contenedor de Fotografía Profesional -->
+        <div class="profile-card__photo-wrapper">
+          <img
+            [src]="profileImage"
+            alt="Antonio Rayas - Consultor & Desarrollador Full-Stack"
+            class="profile-card__photo"
+            (error)="onImageError($event)">
+          
+          <div class="profile-card__photo-overlay">
+            <span class="role-tag">Full-Stack Specialist</span>
+          </div>
 
-        <div class="executive-card__body">
-          <div class="metric-row">
-            <div class="metric-box">
-              <span class="metric-box__title">Automatización de Procesos</span>
-              <span class="metric-box__desc">Reducción de carga manual mediante agentes IA e integraciones API.</span>
-            </div>
-          </div>
-          <div class="metric-row">
-            <div class="metric-box">
-              <span class="metric-box__title">Sistemas Críticos &amp; Campo</span>
-              <span class="metric-box__desc">Plataformas web/móvil conectadas a sensores, drones y análisis geoespacial.</span>
-            </div>
-          </div>
-          <div class="metric-row">
-            <div class="metric-box">
-              <span class="metric-box__title">Infraestructura Lista para Producción</span>
-              <span class="metric-box__desc">Despliegues contenerizados con Docker, alta disponibilidad y código mantenible.</span>
+          <div class="profile-card__floating-kpi">
+            <div class="floating-icon">⚡</div>
+            <div class="floating-text">
+              <strong>Automatización B2B</strong>
+              <small>WhatsApp &amp; Cloud Pipelines</small>
             </div>
           </div>
         </div>
 
-        <div class="executive-card__footer">
-          <span>Stack Principal:</span>
-          <div class="stack-pills">
-            <span>Angular</span>
-            <span>Flutter</span>
-            <span>FastAPI</span>
-            <span>Node.js</span>
-            <span>Docker</span>
+        <!-- Ficha de Experiencia y Stack en la base de la tarjeta -->
+        <div class="profile-card__footer">
+          <div class="profile-card__info">
+            <span class="profile-card__name">Antonio Rayas</span>
+            <span class="profile-card__headline">Ingeniería de Software &amp; Soluciones Empresariales</span>
+          </div>
+
+          <div class="profile-card__stack">
+            <span class="stack-badge">Angular</span>
+            <span class="stack-badge">Flutter</span>
+            <span class="stack-badge">FastAPI</span>
+            <span class="stack-badge">Docker</span>
+            <span class="stack-badge">GPT-4o / Gemini</span>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-
