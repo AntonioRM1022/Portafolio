@@ -98,6 +98,20 @@ export class SolutionsComponent {
       codeUrl: 'https://github.com/AntonioRM1022'
     },
     {
+      id: 'devhack-platform',
+      featured: false,
+      category: 'Plataformas Web & Arquitectura Cloud',
+      title: 'DevHack 2026 - Plataforma Full-Stack para Eventos Tecnológicos',
+      businessProblem:
+        'Arquitectura cloud desacoplada para gestión y registro de eventos masivos. Diseñada con Angular 17+ Standalone y API en FastAPI, base de datos MySQL distribuida en la nube con Aiven, control de sesiones anti-saturación de 60 segundos, validación reCAPTCHA y notificaciones transaccionales automatizadas vía EmailJS.',
+      videoUrl: 'assets/demos/devhack-demo.mp4',
+      posterLabel: 'Frontend Netlify + FastAPI en Render + MySQL Aiven Cloud',
+      kpiHighlight: 'Arquitectura distribuida en producción (Netlify + Render + Aiven)',
+      technologies: ['Angular 17+', 'FastAPI (Python)', 'MySQL Cloud (Aiven)', 'Render', 'Netlify', 'EmailJS', 'Figma'],
+      demoUrl: '#contacto',
+      codeUrl: 'https://github.com/AntonioRM1022'
+    },
+    {
       id: 'colorimetria-ai-vision',
       featured: false,
       category: 'Inteligencia Artificial & Visión por Computadora',
