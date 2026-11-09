@@ -98,6 +98,20 @@ export class SolutionsComponent {
       codeUrl: 'https://github.com/AntonioRM1022'
     },
     {
+      id: 'colorimetria-ai-vision',
+      featured: false,
+      category: 'Inteligencia Artificial & Visión por Computadora',
+      title: 'App Móvil de Diagnóstico Facial & Colorimetría con GPT-4o Visión',
+      businessProblem:
+        'Solución de IA multimodal orientada a retail y estética digital. Analiza rasgos faciales e iluminación mediante GPT-4o Visión, clasifica paletas de colorimetría estacional, genera reportes visuales en formato infografía de alta resolución (.png) y los almacena en base de datos local SQLite.',
+      videoUrl: 'assets/demos/colorimetria-ai-demo.mp4',
+      posterLabel: 'Análisis Facial con GPT-4o Vision + Generación de Infografías PNG',
+      kpiHighlight: 'Diagnóstico biométrico y de imagen asistido por IA',
+      technologies: ['Flutter (Dart)', 'OpenAI GPT-4o Vision', 'SQLite (sqflite)', 'flutter_animate', 'gal / screenshot', 'Android / iOS'],
+      demoUrl: '#contacto',
+      codeUrl: 'https://github.com/AntonioRM1022'
+    },
+    {
       id: 'drone-vision-system',
       featured: false,
       category: 'Industria 4.0 & Visión Artificial',
