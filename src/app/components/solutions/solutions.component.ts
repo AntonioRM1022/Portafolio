@@ -50,17 +50,17 @@ export class SolutionsComponent {
       codeUrl: 'https://github.com/AntonioRM1022/Calculadora_Whatsapp'
     },
     {
-      id: 'spotify-sync-engine',
-      category: 'Integración de APIs & Automatización Backend',
-      title: 'Motor de Sincronización Automática de Datos & Gestión de Cuotas API',
+      id: 'channel-bot-price',
+      category: 'Web Scraping & Automatización de Canales',
+      title: 'Bot de Monitoreo de Liquidaciones & Difusión en WhatsApp',
       businessProblem:
-        'Demuestra arquitectura backend resiliente para sincronización masiva de datos entre plataformas. Implementa autenticación segura OAuth 2.0, paginación profunda, inserción por lotes (batching) y algoritmos de deduplicación para operar fluidamente bajo estrictos límites de tasa (Rate Limiting).',
-      videoUrl: 'assets/demos/spotify-sync-demo.mp4',
-      posterLabel: 'Ejecución en Tiempo Real: Pipeline de Datos, OAuth 2.0 y Batch Processing',
-      kpiHighlight: '100% deduplicación y cero desbordamiento de API',
-      technologies: ['Python 3.10+', 'OAuth 2.0', 'REST APIs', 'Spotipy', 'Batch Processing', 'ETL Pipelines'],
+        'Automatiza el monitoreo continuo de catálogos y liquidaciones mediante navegación desatendida con Playwright Stealth. Aplica algoritmos de pricing dinámico, previene publicaciones repetidas mediante hashing en SQLite y difunde ofertas automáticamente a canales de WhatsApp orquestado con Docker Compose.',
+      videoUrl: 'assets/demos/channel-bot-demo.mp4',
+      posterLabel: 'Playwright Stealth + Orquestación Docker Compose y WAHA API',
+      kpiHighlight: 'Monitoreo y publicación 100% autónoma',
+      technologies: ['Python 3.11', 'Playwright Stealth', 'Docker Compose', 'WAHA API', 'SQLAlchemy / SQLite', 'APScheduler'],
       demoUrl: '#contacto',
-      codeUrl: 'https://github.com/AntonioRM1022/Save_Liked_Song_a-Playlist'
+      codeUrl: 'https://github.com/AntonioRM1022/Channel_Bot_Price'
     }
   ];
 }
