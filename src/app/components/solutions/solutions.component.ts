@@ -70,6 +70,20 @@ export class SolutionsComponent {
       codeUrl: 'https://github.com/AntonioRM1022/Channel_Bot_Price'
     },
     {
+      id: 'storage-service-api-s3',
+      featured: false,
+      category: 'Cloud Storage & Arquitectura de Microservicios',
+      title: 'Storage Service API - Microservicio de Almacenamiento & Firmado Seguro en AWS S3',
+      businessProblem:
+        'Microservicio empresarial para almacenamiento seguro y distribución de archivos en la nube con Amazon S3. Implementa generación de URLs prefirmadas temporales con AWS SDK v3, autenticación estricta con Bearer tokens, resolución dinámica de buckets e integración documentada para pruebas colaborativas en Hoppscotch.',
+      videoUrl: 'assets/demos/storage-s3-demo.mp4',
+      posterLabel: 'AWS SDK v3 + URLs Prefirmadas Seguras & Autenticación Bearer',
+      kpiHighlight: 'Acceso seguro mediante URLs temporales firmadas en S3',
+      technologies: ['Node.js', 'Express', 'TypeScript', 'AWS SDK v3 (S3)', 'Bearer Auth Middleware', 'Hoppscotch'],
+      demoUrl: '#contacto',
+      codeUrl: 'https://github.com/AntonioRM1022'
+    },
+    {
       id: 'ots-ingenieria-corp',
       featured: false,
       category: 'Portales Corporativos & Captación B2B',
