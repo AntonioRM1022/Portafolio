@@ -22,40 +22,18 @@
       </div>
     </div>
 
-    <!-- Grid de Proyectos Destacados (Frente) -->
+    <!-- Grid de Proyectos Destacados (Frente Limpio y Elegante) -->
     <div class="solutions__grid">
       @for (project of featuredProjects; track project.id) {
         <article class="project-card">
-          <!-- Contenedor superior para Video / GIF con Autoplay -->
-          <div class="project-card__media">
-            <video
-              class="project-card__video"
-              [src]="project.videoUrl"
-              autoplay
-              loop
-              muted
-              playsinline
-              preload="metadata">
-            </video>
-
-            <!-- Vista previa corporativa de respaldo -->
-            <div class="project-card__media-placeholder">
-              <div class="media-window-bar">
-                <span></span><span></span><span></span>
-                <small>{{ project.category }}</small>
-              </div>
-              <div class="media-preview-body">
-                <div class="play-indicator">▶</div>
-                <span class="media-preview-label">{{ project.posterLabel }}</span>
-              </div>
-            </div>
-
+          <!-- Encabezado con Categoría y KPI -->
+          <div class="project-card__top">
+            <span class="project-card__category">{{ project.category }}</span>
             <span class="project-card__kpi">{{ project.kpiHighlight }}</span>
           </div>
 
           <!-- Cuerpo de la Tarjeta -->
           <div class="project-card__body">
-            <span class="project-card__category">{{ project.category }}</span>
             <h3 class="project-card__title">{{ project.title }}</h3>
             <p class="project-card__problem">{{ project.businessProblem }}</p>
 
@@ -79,22 +57,6 @@
           </div>
         </article>
       }
-    </div>
-
-    <!-- Banner inferior para invitar a ver más -->
-    <div class="solutions__more-banner">
-      <div class="more-banner-content">
-        <div class="more-banner-text">
-          <h4>¿Buscas un caso de uso específico o una arquitectura particular?</h4>
-          <p>Explora todos los sistemas que he desarrollado: automatizaciones con WhatsApp, visión artificial, scripts de ETL y dashboards empresariales.</p>
-        </div>
-        <button type="button" class="btn btn--primary" (click)="openModal()">
-          <span>Abrir catálogo completo</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="9 18 15 12 9 6"></polyline>
-          </svg>
-        </button>
-      </div>
     </div>
   </div>
 </section>
