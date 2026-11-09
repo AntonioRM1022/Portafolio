@@ -19,7 +19,7 @@ export class NavbarComponent implements OnInit {
   }
 
   private updateActiveSection(): void {
-    const sections = ['soluciones', 'metodologia', 'contacto'];
+    const sections = ['metodologia', 'soluciones', 'contacto'];
     const scrollPosition = window.scrollY + 120;
 
     for (const sectionId of sections) {
