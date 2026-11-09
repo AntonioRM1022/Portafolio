@@ -11,7 +11,8 @@ export interface SolutionProject {
   kpiHighlight: string;
   technologies: string[];
   demoUrl: string;
-  codeUrl: string;
+  codeUrl?: string;
+  isPrivateRepo?: boolean;
   featured?: boolean;
 }
 
@@ -72,6 +73,7 @@ export class SolutionsComponent {
     {
       id: 'ruteia-swarm-routing',
       featured: false,
+      isPrivateRepo: true,
       category: 'Logística Inteligente & Algoritmos de Optimización',
       title: 'RuteIA - Plataforma de Ruteo Masivo con Inteligencia Espacial de Enjambre (Swarm Routing)',
       businessProblem:
@@ -80,12 +82,12 @@ export class SolutionsComponent {
       posterLabel: 'Motor de Optimización Swarm Routing + Copiloto OpenAI & React Leaflet',
       kpiHighlight: 'Optimización de rutas para padrones de +80,000 cuentas',
       technologies: ['FastAPI (Python)', 'React (Vite)', 'OpenAI API', 'Algoritmos TSP & K-Means', 'React Leaflet', 'OSRM Routing API'],
-      demoUrl: '#contacto',
-      codeUrl: 'https://github.com/AntonioRM1022'
+      demoUrl: '#contacto'
     },
     {
       id: 'storage-service-api-s3',
       featured: false,
+      isPrivateRepo: true,
       category: 'Cloud Storage & Arquitectura de Microservicios',
       title: 'Storage Service API - Microservicio de Almacenamiento & Firmado Seguro en AWS S3',
       businessProblem:
@@ -94,8 +96,7 @@ export class SolutionsComponent {
       posterLabel: 'AWS SDK v3 + URLs Prefirmadas Seguras & Autenticación Bearer',
       kpiHighlight: 'Acceso seguro mediante URLs temporales firmadas en S3',
       technologies: ['Node.js', 'Express', 'TypeScript', 'AWS SDK v3 (S3)', 'Bearer Auth Middleware', 'Hoppscotch'],
-      demoUrl: '#contacto',
-      codeUrl: 'https://github.com/AntonioRM1022'
+      demoUrl: '#contacto'
     },
     {
       id: 'ots-ingenieria-corp',
